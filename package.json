@@ -1,0 +1,17 @@
+{
+  "name": "interior-consultant",
+  "version": "1.0.0",
+  "description": "<!-- Please update value in the {}  -->",
+  "main": "index.js",
+  "scripts": {
+    "develop": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --public-url ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "sass": "^1.26.11"
+  }
+}
