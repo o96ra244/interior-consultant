@@ -1,0 +1,93 @@
+/// Breakpoint
+$breakpoint-xs: 0;
+$breakpoint-sm: 575;
+$breakpoint-md: 767;
+$breakpoint-lg: 1100;
+$breakpoint-xl: 1200;
+$breakpoints: () !default;
+$breakpoints: map-merge(
+    (
+      xs: $breakpoint-xs,
+      sm: $breakpoint-sm,
+      md: $breakpoint-md,
+      lg: $breakpoint-lg,
+      xl: $breakpoint-xl,
+    ),
+    $breakpoints
+);
+
+$container-max-width-sm: $breakpoint-sm;
+$container-max-width-md: $breakpoint-md;
+$container-max-width-lg: $breakpoint-lg;
+$container-max-width-xl: $breakpoint-xl;
+$container-max-widths: (
+  sm: $container-max-width-sm,
+  md: $container-max-width-md,
+  lg: $container-max-width-lg,
+  xl: $container-max-width-xl,
+) !default;
+
+$grid-gutter-width: 30px !default;
+
+/// Font Settings
+$webfont: 'Noto Sans JP', sans-serif;
+
+$font-weight-lighter: lighter !default;
+$font-weight-thin: 100 !default;
+$font-weight-extralight: 200 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semiBold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-extraBold: 800 !default;
+$font-weight-black: 900 !default;
+$font-weight-bolder: bolder !default;
+
+$font-size-html: 62.5%;
+$font-size-base: 1.6em;
+$font-size-sm: ($font-size-base * .875) !default;
+$font-size-lg: ($font-size-base * 1.25) !default;
+$font-color-base: var(--black);
+//$font-family-base: "verdana", "小塚ゴシック Pro", "Kozuka Gothic Pro", sans-serif;
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.15;
+
+$font-base: $font-size-base $webfont;
+$font-base-sm: 1.4em $webfont;
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+    (
+      0: 0,
+      1: ($spacer * .25),
+      2: ($spacer * .5),
+      3: $spacer,
+      4: ($spacer * 1.5),
+      5: ($spacer * 3),
+      6: ($spacer * 4.5),
+      7: ($spacer * 6),
+      8: ($spacer * 9),
+    ),
+    $spacers
+);
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex, grid !default;
+$overflows: auto, hidden, visible, scroll !default;
+$positions: static, relative, absolute, fixed, sticky !default;
+
+/// zindex settings
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+$zindex-backtotop: 1080 !default;
+
+$color-k: #181719;
+$color-w: #fff;
+$color-g-2: #a9a9a9;
+$color-g-3: #828282;

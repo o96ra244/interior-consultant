@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*
+Theme Name: bluesharks
+Version: 1.0.0
+Author: ICC Co.Ltd.
+License: ICC Co.Ltd.
+*/
+
+// ==========================================================================
+// Foundation
+// ==========================================================================
+@import "src/assets/scss/foundation/variable";
+@import "src/assets/scss/foundation/mixin";
+@import "src/assets/scss/foundation/reset";
+@import "src/assets/scss/foundation/base";
+@import "src/assets/scss/foundation/utility";
+@import "src/assets/scss/foundation/font";
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+@import "src/assets/scss/layout/base";
+@import "src/assets/scss/layout/main";
+@import "src/assets/scss/layout/header";
+@import "src/assets/scss/layout/footer";
+
+// ==========================================================================
+// Object
+// ==========================================================================
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
+@import "src/assets/scss/object/project/header";
+@import "src/assets/scss/object/project/footer";
+@import "src/assets/scss/object/project/navigaton";
+
+// -----------------------------------------------------------------
+// Page
+// -----------------------------------------------------------------
+@import "src/assets/scss/object/page/home";
+
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
+@import "src/assets/scss/object/utility/mixin";
+@import "src/assets/scss/object/utility/layout";
+@import "src/assets/scss/object/utility/typography";

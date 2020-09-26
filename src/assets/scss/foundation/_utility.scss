@@ -1,0 +1,69 @@
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+
+@include mq(md) {
+  .spview {
+    display: block !important;
+  }
+  .taview {
+    display: none !important;
+  }
+  .sp_taview {
+    display: block !important;
+  }
+  .ta_pcview, .pcview {
+    display: none !important;
+  }
+  .br_sp, .br_tab_sp, .br_pc_sp {
+    display: block !important;
+  }
+  .br_pc, .br_pc_tab, .br_tab {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .sp_taview {
+    display: block !important;
+  }
+  .spview {
+    display: none !important;
+  }
+  .taview {
+    display: block !important;
+  }
+  .pcview {
+    display: none !important;
+  }
+  .br_pc_tab, .br_tab, .br_tab_sp {
+    display: inline-block !important;
+  }
+  .br_pc, .br_sp, .br_pc_sp {
+    display: none !important;
+  }
+}
+
+@include mq(md, min) {
+  .ta-pcview {
+    display: inline-block !important;
+  }
+  .br_pc, .br_pc-tab, .br_pc-sp {
+    display: block !important;
+  }
+  .br_tab, .br_sp, .br_tab_sp {
+    display: none !important;
+  }
+}
+
+@include mq(lg, min) {
+  .sp_taview, .spview, .taview {
+    display: none !important;
+  }
+  .pcview {
+    display: block !important;
+  }
+}

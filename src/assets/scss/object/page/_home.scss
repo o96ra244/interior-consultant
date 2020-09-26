@@ -1,0 +1,121 @@
+.p-home {
+  .p-greeting {
+    flex: 1;
+    margin-bottom: 30px;
+
+    @include mq(xl, min) {
+      max-width: 410px;
+      margin-right: 87px;
+      margin-bottom: 37px;
+    }
+
+    &__title {
+      margin-bottom: 41px;
+      font-family: 'Lora';
+      font-size: 48px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 61px;
+
+      @include mq(md) {
+        margin-bottom: 25px;
+        font-size: 36px;
+        line-height: 46px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 48px;
+      font-family: 'Montserrat';
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 29px;
+
+      @include mq(md) {
+        max-width: 250px;
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    &__link {
+      font-family: 'Montserrat';
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px;
+
+      @include mq(md) {
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      &__arrow {
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        width: 18px;
+        height: 18px;
+        margin-left: 10px;
+        stroke-width: 2px;
+        color: #fff;
+      }
+    }
+  }
+
+  .p-image {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+  }
+
+  .p-profile {
+    position: absolute;
+    z-index: 2;
+    right: 32px;
+    bottom: -78px;
+    margin-left: 32px;
+    padding: 10px 26px 34px;
+    background: $color-k;
+
+    &__wrap {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    &__image {
+      width: 50px;
+      height: 50px;
+      margin-right: 19px;
+      border-radius: 50%;
+    }
+
+    &__name {
+      font-family: 'Montserrat';
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 17px;
+    }
+
+    &__position {
+      color: $color-g-3;
+      font-family: 'Montserrat';
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 15px;
+    }
+
+    &__note {
+      font-family: 'Lora';
+      font-size: 24px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 31px;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.l-header {
+  margin-bottom: 38px;
+
+  @include mq(md, min) {
+    margin-bottom: 171px;
+  }
+}

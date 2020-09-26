@@ -1,0 +1,65 @@
+/// Media Queries
+// ex) @include mq(md) {} -> @media (max-width: 767px) {}
+// ex) @include mq(md, min) {} ->  -> @media (min-width: 768px) {}
+@mixin mq($size, $width: max) {
+  $result: 0;
+  @if (type-of($size) == number) {
+    $result: $size;
+  } @else {
+    @each $key, $value in $breakpoints {
+      @if ($key == $size) {
+        $result: $value;
+      }
+    }
+  }
+  @if ($width == min) {
+    $result: $result + 1;
+  }
+  @media (#{$width}-width: #{$result}px) {
+    @content;
+  }
+}
+
+/// font-size vw
+// ex) $viewportが767の場合
+// @include fz_vw(13) {} -> font-size: 13px; font-size: 4.0625vw;
+@function get_vw($size, $viewport:$breakpoint-md) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size:10) {
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
+
+@mixin create_checkbox($width: 15px, $height: 15px) {
+  position: relative;
+  width: $width;
+  height: $height;
+  cursor: pointer;
+  transition: all 0.15s ease-out 0s;
+  color: #666;
+  border: none;
+  outline: none;
+  background: #e6e8f1;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &.checked::before {
+    font-size: $width * .7;
+    line-height: $width;
+    position: absolute;
+    display: inline-block;
+    width: $width;
+    height: $height;
+    content: '✔';
+    text-align: center;
+  }
+
+  &.checked::after {
+    position: relative;
+    display: block;
+    content: '';
+  }
+}

@@ -1,0 +1,10 @@
+.l-contents {
+  margin: auto;
+  padding: 15px;
+
+  @include mq(md, min) {
+    max-width: 1200px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}

@@ -1,0 +1,49 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+html {
+  font-size: $font-size-html;
+}
+
+body {
+  background: $color-k;
+  color: $color-w;
+  font: $font-base;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+a {
+  color: $color-w;
+  text-decoration: none;
+
+  &:hover, &:active {
+    transition: opacity .2s ease-out;
+    outline: 0;
+    opacity: 0.5;
+  }
+
+  img {
+    border: 0;
+
+    &:hover, &:active {
+      transition: opacity .2s ease-out;
+      outline: 0;
+      opacity: 0.5;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+@include mq(md) {
+  body {
+    font: $font-base-sm;
+  }
+}

@@ -1,0 +1,55 @@
+.u-font--bold {
+  font-weight: bold;
+}
+
+.u-font--small {
+  font-size: 1.2rem;
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    .u-text#{$infix}--left {
+      text-align: left !important;
+    }
+    .u-text#{$infix}--right {
+      text-align: right !important;
+    }
+    .u-text#{$infix}--center {
+      text-align: center !important;
+    }
+  }
+}
+
+.u-font-weight--light {
+  font-weight: $font-weight-light !important;
+}
+
+.u-font-weight--lighter {
+  font-weight: $font-weight-lighter !important;
+}
+
+.u-font-weight--normal {
+  font-weight: $font-weight-normal !important;
+}
+
+.u-font-weight--bold {
+  font-weight: $font-weight-bold !important;
+}
+
+.u-font-weight--bolder {
+  font-weight: $font-weight-bolder !important;
+}
+
+.u-font--italic {
+  font-style: italic !important;
+}
+
+.u-text-decoration--none {
+  text-decoration: none !important;
+}
+
+.u-text-decoration--underline {
+  text-decoration: underline !important;
+}
